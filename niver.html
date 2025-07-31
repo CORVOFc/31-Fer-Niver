@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feliz Aniversário, Fernanda!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff6f0, #ffeaea);
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 30px;
+    }
+    .imagem {
+  max-width: 50%;
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: none;
+  animation: fadeIn 1s ease;
+}
+
+.mensagem {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  display: none;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+    .versiculo {
+      color: #9b59b6;
+      font-style: italic;
+    }
+    .final {
+      color: #ff6b6b;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    button {
+      margin-top: 20px;
+      padding: 15px 35px;
+      background-color: #a0e7e5;
+      color: #333;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Feliz Aniversário, Fernanda! 🎉</h1>
+  <p>Clique no botão abaixo para começar a surpresa!</p>
+  <button id="botao" onclick="mostrarEtapas()">Clique aqui 💖</button>
+
+  <img id="img1" class="imagem" src="img/IMG-20250101-WA0011(1).jpg" />
+  <div id="msg1" class="mensagem">✨ Que seu dia seja cheio de alegria e do amor de Deus! 🎂💐</div>
+
+  <img id="img2" class="imagem" src="img/IMG-20240731-WA0111.jpg" />
+  <div id="msg2" class="mensagem">🌟 Que o Senhor te abençoe mana, que a senhora possa semear tudo de bom desta Terra 🙏❤️</div>
+
+  <img id="img3" class="imagem" src="img/IMG-20240731-WA0139.jpg" />
+  <div id="msg3" class="mensagem versiculo">
+    📖 “O Senhor te abençoe e te guarde; o Senhor faça resplandecer o seu rosto sobre ti.”<br>— Números 6:24-25 ✨
+  </div>
+
+  <img id="img4" class="imagem" src="img/IMG-20230209-WA0055.jpg" />
+  <div id="msg4" class="mensagem">💫 Ela teria orgulho de quem você se tornou mana.</div>
+
+  <img id="img5" class="imagem" src="img/IMG-20241112-WA0050.jpg" />
+  <div id="msg5" class="mensagem final">
+    ❤️ Mesmo com as brigas, com meus erros, minhas falhas e descuidos...<br>
+    Você nunca desistiu de mim.<br><br>
+    Fernanda, você é muito importante pra mim.<br>
+    E eu te amo — muito mais do que consigo expressar.<br>
+    Obrigado por ser quem é. 💖
+  </div>
+
+  <script>
+    let etapa = 0;
+    function mostrarEtapas() {
+      if (etapa > 0) {
+        document.getElementById("img" + etapa).style.display = "none";
+        document.getElementById("msg" + etapa).style.display = "none";
+      }
+      etapa++;
+      document.getElementById("img" + etapa).style.display = "block";
+      document.getElementById("msg" + etapa).style.display = "block";
+      if (etapa === 5) {
+        document.getElementById("botao").style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
